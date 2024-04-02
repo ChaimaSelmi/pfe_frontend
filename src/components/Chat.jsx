@@ -119,7 +119,8 @@ const Chat = () => {
                         msg.sender === userId ? "sent-time" : "received-time"
                       }`}
                     >
-                      {msg.created.slice(0, 16).replace("T", " at ")}
+                      {msg.created &&
+                        msg.created.slice(0, 16).replace("T", " at ")}
                     </time>
                   )}
                 </>
